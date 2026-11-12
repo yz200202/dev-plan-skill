@@ -102,6 +102,42 @@ WorkBuddy 用户放到 `~/.workbuddy/skills/dev-plan/`。
 
 ---
 
+## 分享给别人怎么发
+
+仓库是公开的，任何人无需登录即可读取。但**发给「人」和发给「AI」的地址不一样**，发错了对方就用不起来。
+
+| 对象 | 发什么 | 地址 |
+|---|---|---|
+| 同事 / 朋友（自己看、自己配） | 仓库主页 | `https://github.com/yz200202/dev-plan-skill` |
+| AI 编程助手（让它自动遵守） | **raw 纯文本地址** | `https://raw.githubusercontent.com/yz200202/dev-plan-skill/main/SKILL.md` |
+
+### 发给 AI 的现成话术（直接复制）
+
+钉钉 / 微信 / 飞书里发给对方，让他粘进 AI 对话框：
+
+```
+请先读取并严格遵循这份开发方案规划技能：
+https://raw.githubusercontent.com/yz200202/dev-plan-skill/main/SKILL.md
+
+读完再按它的工作流，为下面这个需求制定完整开发方案（先规划，不要直接写代码）：
+<把你的需求写在这里>
+```
+
+### 对方拉不到链接怎么办（国内网络最常见）
+
+按顺序降级，三个方案都能用：
+
+1. **换镜像地址**（jsDelivr 的 GitHub 缓存，国内通常可达）
+   ```
+   https://cdn.jsdelivr.net/gh/yz200202/dev-plan-skill@main/SKILL.md
+   ```
+2. **下载到本地**：仓库页 `Code` → `Download ZIP`，解压后把 `SKILL.md` 放进对方项目的 `.cursor/rules/`、`CLAUDE.md` 或 `.github/copilot-instructions.md`
+3. **直接粘全文**：把 `SKILL.md` 内容整段粘贴进对话，说「按这份技能的要求制定开发方案」。几百行文本，聊天窗口塞得下
+
+> 判断标准很简单：让 AI 复述一句技能里的规则（比如问「这个技能有几条铁律」），答得上来说明读到了，答不上就是没读到链接。
+
+---
+
 ## 触发方式
 
 配置好之后，出现这些说法时 AI 会自动启用：
